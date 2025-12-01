@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:background="#1B1B1B">
+    <!--
+        @Author Areli Estefes Gutierrez
+        -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="40dp">
+
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/imagenparapro"
+            android:contentDescription="Logo"
+            android:layout_marginRight="16dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unirse a la Sesión"
+            android:textSize="50dp"
+            android:textColor="@color/gris"
+            android:textStyle=""
+            android:fontFamily="sans-serif-condensed" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código de Sesión"
+        android:layout_marginBottom="24dp"
+        android:hintTextColor="#D4E157">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_session_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters"
+            android:maxLength="6"
+            android:textColor="#FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp" />
+
+
+    <Button
+        android:id="@+id/btn_join_session"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unirse"
+        android:backgroundTint="@color/verde_n"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-medium"
+        android:padding="16dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <ImageView
+        android:id="@+id/img_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:src="@drawable/pie"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:contentDescription="Imagen inferior decorativa" />
+
+</LinearLayout>
