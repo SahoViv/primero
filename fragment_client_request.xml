@@ -1,3 +1,4 @@
+<!-- @autor Solis Carmona Yoselyn Atziri -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -176,5 +177,6 @@
         android:layout_margin="0dp"
         android:scaleType="fitXY"
         android:src="@drawable/pie"/>
+
 
 </LinearLayout>
