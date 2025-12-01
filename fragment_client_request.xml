@@ -1,0 +1,180 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="0dp"
+    android:background="@color/negro_o">
+
+    <!-- Información de la sesión -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="4dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@color/gris">
+
+            <ImageView
+                android:id="@+id/img_session"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="16dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_session_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sesión: DJ Name\nCódigo: ABC123"
+                    android:textSize="16sp"
+                    android:textColor="@color/negro_o"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-condensed"/>
+
+                <TextView
+                    android:id="@+id/tv_current_song"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sin canción activa"
+                    android:textSize="14sp"
+                    android:textColor="@color/negro_o"
+                    android:textStyle="italic"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="sans-serif-condensed"/>
+
+                <Button
+                    android:id="@+id/btn_leave_session"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/negro_o"
+                    android:text="Salir de la Sesión"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:backgroundTint="@color/gris2"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--Formulario para solicitar una canción-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Solicitar Canción"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/gris"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tu nombre (opcional)"
+        app:hintTextColor="@color/gris"
+        android:layout_marginBottom="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textColor="@color/gris"
+            android:fontFamily="sans-serif-condensed"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Título de la canción"
+        app:hintTextColor="@color/gris"
+        android:layout_marginBottom="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_song_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/gris"
+            android:fontFamily="sans-serif-condensed"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Artista"
+        app:hintTextColor="@color/gris"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/gris"
+            android:fontFamily="sans-serif-condensed"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_request_song"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar Solicitud"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/verde_n"
+        android:fontFamily="sans-serif-medium"/>
+
+    <!--Mis solicitudes-->
+    <TextView
+        android:id="@+id/tv_my_requests_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mis solicitudes: 0"
+        android:textSize="16sp"
+        android:textColor="@color/gris"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-medium"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_my_requests"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/pie"/>
+
+</LinearLayout>
