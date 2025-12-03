@@ -4,26 +4,28 @@
 @Author Yared Sahori Olguin Vivian
 -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fillViewport="true"
-    android:background="@color/negro_o">
+    android:background="@color/negro_o"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:background="@drawable/imgV"/>
+                android:background="@drawable/imgV"
+                android:layout_marginTop="20dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -31,10 +33,10 @@
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/registro_dj"
                 android:textAlignment="center"
-                android:translationX="30dp"
-                android:translationY="50dp"
+                android:textColor="@color/gris"
                 android:textSize="30dp"
-                android:textColor="@color/gris"/>
+                android:translationX="30dp"
+                android:translationY="80dp" />
 
 
         </LinearLayout>
@@ -42,76 +44,91 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ingrese_los_siguientes_datos"
-            android:textSize="24sp"
-            android:textStyle="bold"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:textColor="@color/gris"/>
+            android:text="@string/ingrese_los_siguientes_datos"
+            android:textColor="@color/gris"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:hint="Nombre"-->
+<!--            android:textColorHint="@color/gris"-->
+<!--            app:boxCornerRadiusBottomEnd="10dp"-->
+<!--            app:boxCornerRadiusBottomStart="10dp"-->
+<!--            app:boxCornerRadiusTopEnd="10dp"-->
+<!--            app:boxCornerRadiusTopStart="10dp"-->
+<!--            app:boxBackgroundMode="outlined"-->
+<!--            app:boxStrokeColor="@color/white"-->
+<!--            app:boxStrokeWidth="2dp">-->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre"
-            android:textColorHint="@color/gris"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="16dp"
-            app:boxCornerRadiusBottomEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            android:layout_marginTop="10dp">
+            android:hint="@string/nombre"
+            android:textColorHint="@color/gris"
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:background="@drawable/borde1"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:textColorHint="@color/gris"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="16dp"
+            android:hint="@string/email"
+            android:textColorHint="@color/gris"
             app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            android:layout_marginTop="10dp">
+            app:boxCornerRadiusTopStart="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:background="@drawable/borde2"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
             android:hint="@string/contrase_a"
             android:textColorHint="@color/gris"
-            android:layout_marginBottom="16dp"
             app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            android:layout_marginTop="10dp">
+            app:boxCornerRadiusTopStart="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:background="@drawable/borde5"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:hint="@string/confirmar_cotrase_a"
             android:textColorHint="@color/gris"
-            android:layout_marginTop="10dp"
             app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
@@ -121,25 +138,41 @@
                 android:id="@+id/et_confirm_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:background="@drawable/borde3"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <ProgressBar
             android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:visibility="gone" />
 
-        <Button
-            android:id="@+id/btn_register"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/gris"
-            android:text="@string/registrarse"
-            android:textColor="@color/negro_o"
-            android:translationY="50dp"/>
+            >
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/pie"
+                android:layout_marginTop="30dp"/>
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/verde_n"
+                android:text="@string/registrarse"
+                android:textAlignment="center"
+                android:textColor="@color/negro_o"
+                android:translationY="25dp"
+                android:translationX="90dp"/>
+
+
+        </FrameLayout>
     </LinearLayout>
 
 </ScrollView>
