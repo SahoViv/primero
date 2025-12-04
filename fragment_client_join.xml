@@ -50,6 +50,7 @@
         android:layout_height="wrap_content"
         android:hint="Código de Sesión"
         android:layout_marginBottom="24dp"
+        android:background="@drawable/borde1"
         android:hintTextColor="#D4E157">
 
         <com.google.android.material.textfield.TextInputEditText
